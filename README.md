@@ -2,8 +2,7 @@
 
 An end-to-end, 100% serverless machine learning system that predicts the Air Quality Index (AQI) for the next 3 days, built with a feature store, automated pipelines, and a live interactive dashboard.
 
-**🔗 Live App:** [Add your Streamlit Cloud URL here]
-**📦 Repository:** [Add your GitHub repo URL here]
+**🔗 Live App:** [https://aqi-predictor-jwg3mdpy7exxmqmncvfjyk.streamlit.app/]
 
 ---
 
