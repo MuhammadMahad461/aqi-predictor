@@ -167,12 +167,6 @@ The best-performing model (by RMSE) is automatically registered in the Hopsworks
 
 ---
 
-## 📝 License
-
-[Add your license here, e.g. MIT]
-
----
-
 ## 🙏 Acknowledgments
 
 Built as part of the Pearls AQI Predictor project — a serverless ML pipeline exercise covering feature engineering, MLOps, and automated deployment.
