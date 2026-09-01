@@ -79,7 +79,7 @@ setuptools==84.0.0
 six==1.17.0
 SQLAlchemy==2.0.41
 starlette==1.6.0
-streamlit==1.63.0
+streamlit>=1.28,<1.30
 threadpoolctl==3.6.0
 toml==0.10.2
 tomli_w==1.2.0
