@@ -33,7 +33,7 @@ javaobj-py3==0.6.1
 jmespath==1.1.0
 joblib==1.4.2
 kiwisolver==1.5.1
-matplotlib==3.11.1
+matplotlib>=3.8
 mock==5.2.0
 narwhals==2.25.0
 numpy==2.4.6
@@ -59,9 +59,9 @@ pytz==2026.3.post1
 requests==2.34.2
 retrying==1.4.2
 s3transfer==0.19.2
-scikit-learn==1.5.2
-scipy==1.18.1
-seaborn==0.13.2
+scikit-learn>=1.5
+scipy>=1.11
+seaborn>=0.13
 setuptools==84.0.0
 six==1.17.0
 SQLAlchemy==2.0.41
