@@ -19,12 +19,15 @@ FEATURE_COLS = [
     "aqi_us", "aqi_change_rate",
 ]
 
+def get_hopsworks_creds():
+    if "HOPSWORKS_API_KEY" in st.secrets:
+        return st.secrets["HOPSWORKS_API_KEY"], st.secrets["HOPSWORKS_PROJECT_NAME"]
+    return os.getenv("HOPSWORKS_API_KEY"), os.getenv("HOPSWORKS_PROJECT_NAME")
+
 @st.cache_resource
 def get_project():
-    return hopsworks.login(
-        api_key_value=os.getenv("HOPSWORKS_API_KEY"),
-        project=os.getenv("HOPSWORKS_PROJECT_NAME"),
-    )
+    api_key, project_name = get_hopsworks_creds()
+    return hopsworks.login(api_key_value=api_key, project=project_name)
 
 @st.cache_resource
 def load_model():
