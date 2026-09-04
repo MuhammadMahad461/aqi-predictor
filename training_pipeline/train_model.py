@@ -11,7 +11,7 @@ from hopsworks_utils import get_feature_store
 def load_training_data():
     fs = get_feature_store()
     aqi_fg = fs.get_feature_group(name="aqi_features", version=1)
-    df = aqi_fg.read()
+    df = aqi_fg.read(read_options={"use_hive": True})
     return df
 
 from sklearn.model_selection import train_test_split
