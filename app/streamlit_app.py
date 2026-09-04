@@ -38,12 +38,12 @@ def load_model():
     loaded_model = joblib.load(os.path.join(model_dir, "model.pkl"))
     return loaded_model, model
 
-@st.cache_data(ttl=1800)  # refresh every 30 min
+@st.cache_data(ttl=1800)
 def load_latest_features():
     project = get_project()
     fs = project.get_feature_store()
     fg = fs.get_feature_group(name="aqi_features", version=1)
-    df = fg.read()
+    df = fg.read(read_options={"use_hive": True})
     df = df.sort_values("timestamp", ascending=False)
     return df
 
